@@ -12,12 +12,13 @@
 
 template<size_t N>
 int smallest_number(std::array<int, N> list_of_numbers) {
+    int smallest = list_of_numbers[0];
     for (int aSingleElement : list_of_numbers) {
-        if (list_of_numbers[0] > aSingleElement) {
-            list_of_numbers[0] = aSingleElement;
+        if (smallest > aSingleElement) {
+             smallest = aSingleElement;
         }
     }
-    return list_of_numbers[0];
+    return smallest;
 }
 
 int main() {
